@@ -11,7 +11,7 @@
   .main{
     box-sizing: border-box;
   }
-  .secondsquare {
+  .subsquare {
     width: calc(100%/3);
     height: calc(100%/3);
     float: left;
@@ -42,7 +42,7 @@
        width:100vh;
        border: .3vh solid black;
     }
-    .secondsquare{
+    .subsquare{
       border: .3vh solid black;
     }
     .insideblocks{
@@ -65,7 +65,7 @@
         height:100vw;
         border: .3vw solid black;
     }
-    .secondsquare{
+    .subsquare{
       border: .3vw solid black;
     }
     .insideblocks{

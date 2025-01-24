@@ -13,7 +13,7 @@
     grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
     grid-template-rows: calc(100%/3) calc(100%/3) calc(100%/3);
   }
-  .secondsquare{
+  .subsquare{
     box-sizing: border-box;
     display: grid;
     /* grid-template-columns: repeat(3,1fr); */
@@ -25,8 +25,9 @@
     box-sizing: border-box;
     overflow:hidden;
     text-overflow: clip;
-    padding:30% 40%;
-    
+    /* padding:30% 40%; */
+    text-align: center;
+    line-height: 180%;
   }
   
   @media (orientation: landscape) {
@@ -36,7 +37,7 @@
        width:100vh;
        border: .3vh solid black;
     }
-    .secondsquare{
+    .subsquare{
       border: .3vh solid black;
     }
     .insideblocks{
@@ -53,7 +54,7 @@
         height:100vw;
         border: .3vw solid black;
     }
-    .secondsquare{
+    .subsquare{
       border: .3vw solid black;
     }
     .insideblocks{

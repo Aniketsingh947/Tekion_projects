@@ -12,7 +12,7 @@ body{
     display: flex;
     flex-wrap: wrap;
   }
-  .secondsquare {
+  .subsquare {
     flex: 1 1 30%;
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +40,7 @@ body{
        width:100vh;
        border: .3vh solid black;
     }
-    .secondsquare{
+    .subsquare{
       border: .3vh solid black;
     }
     .insideblocks{
@@ -57,7 +57,7 @@ body{
         height:100vw;
         border: .3vw solid black;
     }
-    .secondsquare{
+    .subsquare{
       border: .3vw solid black;
     }
     .insideblocks{
