@@ -123,22 +123,22 @@ function fillRemaining(grid, i, j) {
     return false;
 }
 
-//Keeping only prefilled tiles
-function KeepDigits(grid, row, col) {
+
+function keepDigits(grid, row, col, keep) {
     let positions = [];
     
-    
-    while (positions.length < 3) {
+    while (positions.length < keep) {
         let randomPos = Math.floor(Math.random() * 9); 
         let r = Math.floor(randomPos / 3);  
         let c = randomPos % 3;  
         let pos = [row + r, col + c];
         
-      
+        // Ensure no duplicate positions
         if (!positions.some(p => p[0] === pos[0] && p[1] === pos[1])) {
             positions.push(pos);
         }
     }
+
     for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
             let shouldSkip = false;
@@ -153,6 +153,31 @@ function KeepDigits(grid, row, col) {
     }
 }
 
+//Function to equally distribute any specified number according to level into subsquares
+function equalDistribution(visiblegrid,prefilledNumber)
+{
+    const divisor = Math.floor(prefilledNumber / 9);
+    let remainder = prefilledNumber % 9;
+
+    const subsquares = [];
+    for (let i = 0; i < 9; i += 3) {
+        for (let j = 0; j < 9; j += 3) {
+            subsquares.push({ row: i, col: j });
+        }
+    }
+
+    shuffleArray(subsquares);
+
+    subsquares.forEach((subsquare) => {
+        let digitsTokeep = divisor;
+        if (remainder > 0) {
+            digitsTokeep += 1;
+            remainder -= 1;
+        }
+        keepDigits(visiblegrid, subsquare.row, subsquare.col, digitsTokeep);
+    });
+}
+
 //Sudoku generation logic begins here
 function sudokuGenerator() {
     const grid
@@ -161,12 +186,9 @@ function sudokuGenerator() {
     fillDiagonal(grid);
     fillRemaining(grid, 0, 3);
     const visiblegrid = grid.map(row => row.slice());
-    for (let i = 0; i < 9; i += 3) {
-        for (let j = 0; j < 9; j += 3) {
-            KeepDigits(visiblegrid, i, j);
-        }
-    }
-    return [visiblegrid,grid];
+    let prefilledNumber = 25;
+    equalDistribution(visiblegrid,prefilledNumber);
+    return [visiblegrid, grid];
 }
 
 export default sudokuGenerator;

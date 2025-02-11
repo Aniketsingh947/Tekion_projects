@@ -1,7 +1,7 @@
 import sudokuGenerator from "./Sudokugeneration.js";
 import { msToTime,generateUUID } from "./utilities.js";
 
-let totalfilled=27;
+let totalfilled=25;
 
 
 const alltiles = document.querySelectorAll(".tiles");
@@ -33,7 +33,7 @@ validatebutton.addEventListener('click',function()
                 console.log("inside validate");
                 newsudoku.endtime=Date.now();
                 const millis=newsudoku.endtime-newsudoku.starttime;
-                const timelapsed=msToTime(millis);
+                const timelapsed=msToTime(millis); 
                 alert(`Total Time taken : ${timelapsed}`);
                 startnewgame();
                 //here will make appear a new div for showing the timetaken and only Newgame button will appear along with it,for timebeing i am keeping this alert functionality.
@@ -56,6 +56,7 @@ validatebutton.addEventListener('click',function()
 const Newgamebutton=document.querySelector('.newgame');
 Newgamebutton.addEventListener('click',function()
 {
+    totalfilled=25;
     Sudoku.instance=null;
     startnewgame();
 })
