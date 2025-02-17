@@ -1,101 +1,100 @@
-  body{
-    display: flex;
-    margin:0;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height:100vh;
+body {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
-  
-  .main{
-    background: rgb(232, 176, 123);
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
-    grid-template-rows: calc(100%/3) calc(100%/3) calc(100%/3);
-  }
-  .subsquare{
-    box-sizing: border-box;
-    display: grid;
-    /* grid-template-columns: repeat(3,1fr); */
-    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
-    grid-template-rows: calc(100%/3) calc(100%/3) calc(100%/3);
-  }
-  .tiles{
-    background: rgb(235, 239, 173);
-    box-sizing: border-box;
-    overflow:hidden;
-    text-overflow: clip;
-    /* padding:30% 40%; */
-    text-align: center;
-    line-height: 180%;
-  }
-  .prefilled
-  {
-    background: rgba(52, 52, 51, 0.721);
-    color:aliceblue
-  }
 
-  .btn-group{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100%/5);
-    width: 60%;
-    margin:2%;
-  }
-  .btn-group button {
-    flex:1 1 20%;
-    background: rgb(217,242,214);
-    background: linear-gradient(90deg, rgba(217,242,214,1) 17%, rgba(224,235,63,1) 90%);
-    border: 1px solid green; 
-    color: rgb(42, 41, 41); 
-    height: 80%;
-    width: 100%;
-    margin-left: 1%;
-    cursor: pointer;  
-  }
+.main {
+  background: rgb(232, 176, 123);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+.subsquare {
+  box-sizing: border-box;
+  display: grid;
+  /* grid-template-columns: repeat(3,1fr); */
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+.tiles {
+  background: rgb(235, 239, 173);
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: clip;
+  /* padding:30% 40%; */
+  text-align: center;
+  line-height: 180%;
+}
+.prefilled {
+  background: rgba(52, 52, 51, 0.721);
+  color: aliceblue;
+}
 
-  .btn-group button:hover {
-    background: #c4a05f;
-  }
-  
-  
-  @media (orientation: landscape) {
-    
-    .main{
-       height:80vh;
-       width:80vh;
-       border: .3vh solid black;
-    }
-    .subsquare{
-      border: .3vh solid black;
-    }
-    .tiles{
-      border: .03vh solid black;
-      font-size: 5vh;
-    }
-    .btn-group{
-      flex-direction: row;
-    }
-  }
-  
-  @media (orientation: portrait) {
-    
-    .main{
-        width:80vw;
-        height:80vw;
-        border: .3vw solid black;
-    }
-    .subsquare{
-      border: .3vw solid black;
-    }
-    .tiles{
-      border: .03vw solid black;
-      font-size: 5vw;
-    }
-    .btn-group{
-      flex-direction: column;
-    }
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% / 5);
+  width: 60%;
+  margin: 2%;
+}
+.btn-group button {
+  flex: 1 1 20%;
+  background: rgb(217, 242, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(217, 242, 214, 1) 17%,
+    rgba(224, 235, 63, 1) 90%
+  );
+  border: 1px solid green;
+  color: rgb(42, 41, 41);
+  height: 80%;
+  width: 100%;
+  margin-left: 1%;
+  cursor: pointer;
+}
 
-  }  
+.btn-group button:hover {
+  background: #c4a05f;
+}
+
+@media (orientation: landscape) {
+  .main {
+    height: 80vh;
+    width: 80vh;
+    border: 0.3vh solid black;
+  }
+  .subsquare {
+    border: 0.3vh solid black;
+  }
+  .tiles {
+    border: 0.03vh solid black;
+    font-size: 5vh;
+  }
+  .btn-group {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  .main {
+    width: 80vw;
+    height: 80vw;
+    border: 0.3vw solid black;
+  }
+  .subsquare {
+    border: 0.3vw solid black;
+  }
+  .tiles {
+    border: 0.03vw solid black;
+    font-size: 5vw;
+  }
+  .btn-group {
+    flex-direction: column;
+  }
+}

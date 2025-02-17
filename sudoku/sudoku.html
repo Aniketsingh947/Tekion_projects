@@ -1,120 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sudoku.css">    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sudoku.css" />
     <!-- <link rel="stylesheet" href="sudukoflex.css">   -->
     <!-- <link rel="stylesheet" href="sudoku-nothing.css">  -->
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <div class="subsquare" data-block="0">
-            <input class="tiles" data-row="0" data-column="0">
-            <input class="tiles" data-row="0" data-column="1">
-            <input class="tiles" data-row="0" data-column="2">
-            <input class="tiles" data-row="1" data-column="0">
-            <input class="tiles" data-row="1" data-column="1">
-            <input class="tiles" data-row="1" data-column="2">
-            <input class="tiles" data-row="2" data-column="0">
-            <input class="tiles" data-row="2" data-column="1">
-            <input class="tiles" data-row="2" data-column="2">
-        </div>
-        <div class="subsquare" data-block="1">
-            <input class="tiles" data-row="0" data-column="3">
-            <input class="tiles" data-row="0" data-column="4">
-            <input class="tiles" data-row="0" data-column="5">
-            <input class="tiles" data-row="1" data-column="3">
-            <input class="tiles" data-row="1" data-column="4">
-            <input class="tiles" data-row="1" data-column="5">
-            <input class="tiles" data-row="2" data-column="3">
-            <input class="tiles" data-row="2" data-column="4">
-            <input class="tiles" data-row="2" data-column="5">
-        </div>
-        <div class="subsquare" data-block="2">
-            <input class="tiles" data-row="0" data-column="6">
-            <input class="tiles" data-row="0" data-column="7">
-            <input class="tiles" data-row="0" data-column="8">
-            <input class="tiles" data-row="1" data-column="6">
-            <input class="tiles" data-row="1" data-column="7">
-            <input class="tiles" data-row="1" data-column="8">
-            <input class="tiles" data-row="2" data-column="6">
-            <input class="tiles" data-row="2" data-column="7">
-            <input class="tiles" data-row="2" data-column="8">
-        </div>
-        <div class="subsquare" data-block="3">
-            <input class="tiles" data-row="3" data-column="0">
-            <input class="tiles" data-row="3" data-column="1">
-            <input class="tiles" data-row="3" data-column="2">
-            <input class="tiles" data-row="4" data-column="0">
-            <input class="tiles" data-row="4" data-column="1">
-            <input class="tiles" data-row="4" data-column="2">
-            <input class="tiles" data-row="5" data-column="0">
-            <input class="tiles" data-row="5" data-column="1">
-            <input class="tiles" data-row="5" data-column="2">
-        </div>
-        <div class="subsquare" data-block="4">
-            <input class="tiles" data-row="3" data-column="3">
-            <input class="tiles" data-row="3" data-column="4">
-            <input class="tiles" data-row="3" data-column="5">
-            <input class="tiles" data-row="4" data-column="3">
-            <input class="tiles" data-row="4" data-column="4">
-            <input class="tiles" data-row="4" data-column="5">
-            <input class="tiles" data-row="5" data-column="3">
-            <input class="tiles" data-row="5" data-column="4">
-            <input class="tiles" data-row="5" data-column="5">
-        </div>
-        <div class="subsquare" data-block="5">
-            <input class="tiles" data-row="3" data-column="6">
-            <input class="tiles" data-row="3" data-column="7">
-            <input class="tiles" data-row="3" data-column="8">
-            <input class="tiles" data-row="4" data-column="6">
-            <input class="tiles" data-row="4" data-column="7">
-            <input class="tiles" data-row="4" data-column="8">
-            <input class="tiles" data-row="5" data-column="6">
-            <input class="tiles" data-row="5" data-column="7">
-            <input class="tiles" data-row="5" data-column="8">
-        </div>
-        <div class="subsquare" data-block="6">
-            <input class="tiles" data-row="6" data-column="0">
-            <input class="tiles" data-row="6" data-column="1">
-            <input class="tiles" data-row="6" data-column="2">
-            <input class="tiles" data-row="7" data-column="0">
-            <input class="tiles" data-row="7" data-column="1">
-            <input class="tiles" data-row="7" data-column="2">
-            <input class="tiles" data-row="8" data-column="0">
-            <input class="tiles" data-row="8" data-column="1">
-            <input class="tiles" data-row="8" data-column="2">
-        </div>
-        <div class="subsquare" data-block="7">
-            <input class="tiles" data-row="6" data-column="3">
-            <input class="tiles" data-row="6" data-column="4">
-            <input class="tiles" data-row="6" data-column="5">
-            <input class="tiles" data-row="7" data-column="3">
-            <input class="tiles" data-row="7" data-column="4">
-            <input class="tiles" data-row="7" data-column="5">
-            <input class="tiles" data-row="8" data-column="3">
-            <input class="tiles" data-row="8" data-column="4">
-            <input class="tiles" data-row="8" data-column="5">
-        </div>
-        <div class="subsquare" data-block="8">
-            <input class="tiles" data-row="6" data-column="6">
-            <input class="tiles" data-row="6" data-column="7">
-            <input class="tiles" data-row="6" data-column="8">
-            <input class="tiles" data-row="7" data-column="6">
-            <input class="tiles" data-row="7" data-column="7">
-            <input class="tiles" data-row="7" data-column="8">
-            <input class="tiles" data-row="8" data-column="6">
-            <input class="tiles" data-row="8" data-column="7">
-            <input class="tiles" data-row="8" data-column="8">
-        </div>
+      <div class="subsquare" data-block="0">
+        <input class="tiles" data-row="0" data-column="0" />
+        <input class="tiles" data-row="0" data-column="1" />
+        <input class="tiles" data-row="0" data-column="2" />
+        <input class="tiles" data-row="1" data-column="0" />
+        <input class="tiles" data-row="1" data-column="1" />
+        <input class="tiles" data-row="1" data-column="2" />
+        <input class="tiles" data-row="2" data-column="0" />
+        <input class="tiles" data-row="2" data-column="1" />
+        <input class="tiles" data-row="2" data-column="2" />
+      </div>
+      <div class="subsquare" data-block="1">
+        <input class="tiles" data-row="0" data-column="3" />
+        <input class="tiles" data-row="0" data-column="4" />
+        <input class="tiles" data-row="0" data-column="5" />
+        <input class="tiles" data-row="1" data-column="3" />
+        <input class="tiles" data-row="1" data-column="4" />
+        <input class="tiles" data-row="1" data-column="5" />
+        <input class="tiles" data-row="2" data-column="3" />
+        <input class="tiles" data-row="2" data-column="4" />
+        <input class="tiles" data-row="2" data-column="5" />
+      </div>
+      <div class="subsquare" data-block="2">
+        <input class="tiles" data-row="0" data-column="6" />
+        <input class="tiles" data-row="0" data-column="7" />
+        <input class="tiles" data-row="0" data-column="8" />
+        <input class="tiles" data-row="1" data-column="6" />
+        <input class="tiles" data-row="1" data-column="7" />
+        <input class="tiles" data-row="1" data-column="8" />
+        <input class="tiles" data-row="2" data-column="6" />
+        <input class="tiles" data-row="2" data-column="7" />
+        <input class="tiles" data-row="2" data-column="8" />
+      </div>
+      <div class="subsquare" data-block="3">
+        <input class="tiles" data-row="3" data-column="0" />
+        <input class="tiles" data-row="3" data-column="1" />
+        <input class="tiles" data-row="3" data-column="2" />
+        <input class="tiles" data-row="4" data-column="0" />
+        <input class="tiles" data-row="4" data-column="1" />
+        <input class="tiles" data-row="4" data-column="2" />
+        <input class="tiles" data-row="5" data-column="0" />
+        <input class="tiles" data-row="5" data-column="1" />
+        <input class="tiles" data-row="5" data-column="2" />
+      </div>
+      <div class="subsquare" data-block="4">
+        <input class="tiles" data-row="3" data-column="3" />
+        <input class="tiles" data-row="3" data-column="4" />
+        <input class="tiles" data-row="3" data-column="5" />
+        <input class="tiles" data-row="4" data-column="3" />
+        <input class="tiles" data-row="4" data-column="4" />
+        <input class="tiles" data-row="4" data-column="5" />
+        <input class="tiles" data-row="5" data-column="3" />
+        <input class="tiles" data-row="5" data-column="4" />
+        <input class="tiles" data-row="5" data-column="5" />
+      </div>
+      <div class="subsquare" data-block="5">
+        <input class="tiles" data-row="3" data-column="6" />
+        <input class="tiles" data-row="3" data-column="7" />
+        <input class="tiles" data-row="3" data-column="8" />
+        <input class="tiles" data-row="4" data-column="6" />
+        <input class="tiles" data-row="4" data-column="7" />
+        <input class="tiles" data-row="4" data-column="8" />
+        <input class="tiles" data-row="5" data-column="6" />
+        <input class="tiles" data-row="5" data-column="7" />
+        <input class="tiles" data-row="5" data-column="8" />
+      </div>
+      <div class="subsquare" data-block="6">
+        <input class="tiles" data-row="6" data-column="0" />
+        <input class="tiles" data-row="6" data-column="1" />
+        <input class="tiles" data-row="6" data-column="2" />
+        <input class="tiles" data-row="7" data-column="0" />
+        <input class="tiles" data-row="7" data-column="1" />
+        <input class="tiles" data-row="7" data-column="2" />
+        <input class="tiles" data-row="8" data-column="0" />
+        <input class="tiles" data-row="8" data-column="1" />
+        <input class="tiles" data-row="8" data-column="2" />
+      </div>
+      <div class="subsquare" data-block="7">
+        <input class="tiles" data-row="6" data-column="3" />
+        <input class="tiles" data-row="6" data-column="4" />
+        <input class="tiles" data-row="6" data-column="5" />
+        <input class="tiles" data-row="7" data-column="3" />
+        <input class="tiles" data-row="7" data-column="4" />
+        <input class="tiles" data-row="7" data-column="5" />
+        <input class="tiles" data-row="8" data-column="3" />
+        <input class="tiles" data-row="8" data-column="4" />
+        <input class="tiles" data-row="8" data-column="5" />
+      </div>
+      <div class="subsquare" data-block="8">
+        <input class="tiles" data-row="6" data-column="6" />
+        <input class="tiles" data-row="6" data-column="7" />
+        <input class="tiles" data-row="6" data-column="8" />
+        <input class="tiles" data-row="7" data-column="6" />
+        <input class="tiles" data-row="7" data-column="7" />
+        <input class="tiles" data-row="7" data-column="8" />
+        <input class="tiles" data-row="8" data-column="6" />
+        <input class="tiles" data-row="8" data-column="7" />
+        <input class="tiles" data-row="8" data-column="8" />
+      </div>
     </div>
     <div class="btn-group">
-        <button class="validate">Validate</button>
-        <button class="newgame">Newgame</button>
-        <!-- <button>Hint</button> -->
-      </div>
+      <button class="validate">Validate</button>
+      <button class="newgame">Newgame</button>
+      <!-- <button>Hint</button> -->
+    </div>
     <script type="module" src="main.js"></script>
-</body>
+  </body>
 </html>
