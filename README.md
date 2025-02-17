@@ -42,3 +42,5 @@ The architecture of this project is designed to efficiently handle the generatio
 # Flow of the Project
 
 Home page (Enter the player name) -> Redirects to Main page -> Onload checks for username and starts new game -> In start new game 1.Generates valid sudoku and only few tiles value is kept 2.Sudoku object is created
+
+<img src="/Users/anikets/Desktop/untitled folder/Tekion_projects/sudoku/411166120-19d50ad4-d91e-4a93-96fc-149807a90ca0.png">
