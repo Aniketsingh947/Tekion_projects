@@ -1,11 +1,17 @@
 import sudokuGenerator from "./Sudokugeneration.js";
 import { msToTime, generateUUID } from "./utilities.js";
 
-let totalfilled = 25;
+const Total_No_of_filled_cell = 25;
+const Total_cells = 81;
+let totalfilled = Total_No_of_filled_cell;
+let containsObject = getSudokoInstance();
+// in this solutioin global variable is created whereas i am commenting the solution where no global variable will be needed but that is more
+// repeatetive and always the getSudoku function will be called making closure usage useless.
 
 const alltiles = document.querySelectorAll(".tiles");
 alltiles.forEach(function (tile) {
-  const newsudoku = new Sudoku();
+  // const containsObject = getSudokoInstance();
+  const newsudoku = containsObject();
   tile.addEventListener("change", function (event) {
     const value = parseInt(event.target.value);
     const row = event.target.dataset.row;
@@ -24,7 +30,8 @@ alltiles.forEach(function (tile) {
 
 const validatebutton = document.querySelector(".validate");
 validatebutton.addEventListener("click", function () {
-  const newsudoku = new Sudoku();
+  //const containsObject = getSudokoInstance();
+  const newsudoku = containsObject();
   if (newsudoku.validate()) {
     console.log("inside validate");
     newsudoku.endtime = Date.now();
@@ -35,7 +42,7 @@ validatebutton.addEventListener("click", function () {
     //here will make appear a new div for showing the timetaken and only Newgame button will appear along with it,for timebeing i am keeping this alert functionality.
     //totaltimeplayed.textContent=timelapsed;
   } else {
-    if (totalfilled == 81) {
+    if (totalfilled == Total_cells) {
       alert("InCorrect");
     } else {
       alert("Incomplete");
@@ -45,10 +52,18 @@ validatebutton.addEventListener("click", function () {
 
 const Newgamebutton = document.querySelector(".newgame");
 Newgamebutton.addEventListener("click", function () {
-  totalfilled = 25;
+  totalfilled = Total_No_of_filled_cell;
   Sudoku.instance = null;
+  containsObject = getSudokoInstance();
   startnewgame();
 });
+
+function getSudokoInstance() {
+  const alreadyMadeObject = new Sudoku();
+  return function () {
+    return alreadyMadeObject;
+  };
+}
 
 function checkforUsername() {
   const inputname = localStorage.getItem("userName");
@@ -59,10 +74,9 @@ function checkforUsername() {
 }
 
 function startnewgame() {
-  const newsudoku = new Sudoku();
-  console.log(newsudoku);
+  //const containsObject = getSudokoInstance();
+  const newsudoku = containsObject();
   if (newsudoku.visiblegrid) {
-    console.log("entered");
     for (let i = 0; i < 9; i++) {
       for (let j = 0; j < 9; j++) {
         const ele = document.querySelector(

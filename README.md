@@ -7,7 +7,7 @@ This project is a **Sudoku Generator** and **Sudoku Solver** developed using Jav
 ## Key Features
 
 - **Valid Sudoku Generation**: The algorithm used to generate the Sudoku puzzle runs in constant time complexity, ensuring efficient puzzle creation.
-  - **Dynamic Puzzle Layout**: The generated Sudoku puzzle contains 25 pre-filled numbers. These numbers are evenly distributed across the grid using a mathematical approach:
+- **Dynamic Puzzle Layout**: The generated Sudoku puzzle contains 25 pre-filled numbers. These numbers are evenly distributed across the grid using a mathematical approach:
   - The total number of digits to be pre-filled is divided by 9 (prefilledNumber / 9) to determine how many digits will go into each subsquare.
   - The remainder of this division (prefilledNumber % 9) is used to add one extra digit to some of the subsquares to ensure a balanced distribution.
   - The subsquares are shuffled randomly to avoid predictable patterns.
